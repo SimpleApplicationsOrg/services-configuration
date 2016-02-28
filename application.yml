@@ -11,8 +11,8 @@ ha:
 
 eureka:
   instance:
-    metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    hostname: ${APPLICATION_DOMAIN}
+    nonSecurePort: 80    
   client:
     serviceUrl:
       defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
