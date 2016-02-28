@@ -1,18 +1,9 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
 
-info:
-  id: ${spring.application.name}
-
 debug: true
 
-ha:
-  server_id: ${random.value}
-
 eureka:
-  instance:
-    hostname: ${APPLICATION_DOMAIN}
-    nonSecurePort: 80    
   client:
     serviceUrl:
       defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
