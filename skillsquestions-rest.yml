@@ -2,6 +2,6 @@ message: "skillsquestions"
 spring:
   data:
     neo4j:
-      uri: ${vcap.services.neo4j-bd.credentials.uri}
+      uri: http://skillstest.sb05.stations.graphenedb.com:24789
       username: SkillsTest
       password: xYqAs9OOitte5B13mgnB
